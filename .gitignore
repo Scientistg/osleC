@@ -56,3 +56,6 @@ angstrom-glibc-x86_64-armv7at2hf-neon-v2017.12-toolchain.sh
 
 # Test files
 AAA
+
+#Vscode
+.vscode
