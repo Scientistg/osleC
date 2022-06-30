@@ -9,7 +9,7 @@ Para a construção deste projeto, foram utilizados os seguintes componentes:
  **3.** 2 x LED\
  **4.** 3 x PushButton\
  **5.** 2 x Resistores\
- **6.** Fonte de alimentação 5V 1A\
+ **6.** Fonte de alimentação 5V 1A
 
 Já para a compilação do projeto foram utilizadas as seguintes dependencias:
 
