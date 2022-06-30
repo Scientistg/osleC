@@ -9,11 +9,13 @@
 bool jogoTerminou = false;
 
 int fd;
-char path1[] = "gpio/gpio";
+char path0[] = "/sys/class/gpio/export";
+char path1[] = "/sys/class/gpio/gpio";
 char path2[] = "/direction";
 char path3[] = "/value";
 char buffer[MAX];
-char ports[5][3] = {"73","75","77","88","89"};
+char ports[5][3] = {"46","47","48","88","89"};
+
 
 void writePort(char *port, char *value){
     strcat(strcpy(buffer, path1), port);
@@ -33,7 +35,6 @@ bool readPort(char *port){
     if(lido[0] == 48) return true;
     else return false;
 }
-
 
 
 void escritaLed(int ledNum, char *value){
@@ -67,7 +68,7 @@ int main(int argc, char *argv[]){
 
     // export GPIO
     int i;
-    fd = open("gpio/export", O_WRONLY);
+    fd = open(path0, O_WRONLY);
     for(i = 0; i < 5; i++){
         strcat(strcpy(buffer, ports[i]), "\n");
         write(fd, buffer, 3);
@@ -93,23 +94,7 @@ int main(int argc, char *argv[]){
         close(fd);
     }
 
-    // //Read ports
-    // for(i = 0; i < 3; i++){
-    //     char lido[3];
-    //     strcat(strcpy(buffer, path1), ports[i]);
-    //     strcat(strcpy(buffer, buffer), path3);    
-    //     fd = open(buffer, O_RDONLY);
-    //     int a = read(fd, lido, 2);
-    //     close(fd);
-    //     printf("\nValor Lido na porta %s %s ", ports[i], lido);
-    // }    
 
-    // // Blink GPIO once
-    // fd = open("gpio/gpio89/value", O_WRONLY);
-    // write(fd, "0", 1);
-    // usleep(1000000);
-    // write(fd, "1", 1);
-    // close(fd);
 
     resetGame();
     while(true){

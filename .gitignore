@@ -54,8 +54,11 @@ dkms.conf
 # Environment Configurator
 angstrom-glibc-x86_64-armv7at2hf-neon-v2017.12-toolchain.sh
 
-# Test files
+# Test files and folders
 AAA
+gpio
+interrupt_demo_vs2015
+test.c
 
 #Vscode
 .vscode
