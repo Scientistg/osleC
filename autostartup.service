@@ -1,0 +1,10 @@
+[Unit]
+Description=autostartup service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/root/passaOuRepassa
+
+[Install]
+WantedBy=multi-user.target
