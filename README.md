@@ -60,7 +60,7 @@ cd osleC
 Para se realizar a compilação cruzada se executa o seguinte comando:
 
 ```console
-${CC} -Wall new_code.c -o passaOuRepassa
+${CC} -Wall code.c -o passaOuRepassa
 ```
 
 O arquivo **passaOuRepassa** consiste do executável em arquitertura *ARM* que será copiado utilizando ssh. Para isso, deve se conectar a placa em uma rede, obtendo o ip dessa pelo seu metodo de preferência. Com o Host na mesma rede que o sistema embarcado, a fim de facilitar a conexão, realiza-se os seguintes comandos:
@@ -68,6 +68,11 @@ O arquivo **passaOuRepassa** consiste do executável em arquitertura *ARM* que s
 ```console
 scp passaOuRepassa root@<ip>:/home/root
 ```
+```console
+scp autostartup.service root@<ip>:/etc/systemd/system/autostartup.service
+```
+O segundo arquivo será utilizado em passos futuros.
+
 Para acessar e executar o projeto:
 
 ```console
@@ -79,5 +84,26 @@ Dentro do ambiente embarcado:
 ./passaOuRepassa
 ```
 
+Uma vez que já foi testado, passamos para a configuração do processo de *startup on boot*, para isso faremos uso de serviços, conforme descrito nesse [guia](https://developer.toradex.com/linux-bsp/how-to/boot/how-to-autorun-application-at-the-start-up-in-linux/#procedure). Para isso, caso ainda não se tenha realizado, finalize a execução do processo anterior ou abra um novo terminal e execute os passos abaixo:
 
+```console
+systemctl --system daemon-reload
+```
 
+```console
+systemctl enable autostartup.service
+```
+
+Uma vez configurado, podemos verificar o estado com o comando:
+
+```console
+systemctl status autostartup.service
+```
+
+Por fim, basta reiniciar a placa para testar o projeto como um todo:
+
+```console
+reboot
+```
+
+Com tudo funcionando, se divita e descubra quem é o melhor em trivia com seus amigos!
