@@ -11,13 +11,15 @@ Para a construção deste projeto, foram utilizados os seguintes componentes:
  **5.** 2 x Resistores\
  **6.** Fonte de alimentação 5V 1A
 
+A montagem está esquematizada na figura a seguir:
+
+![Esquemático](/Multim%C3%ADdia/Flowchart.jpg)
+
 Já para a compilação do projeto foram utilizadas as seguintes dependencias:
 
  **1.** Ubuntu 20.04\
  **2.** [Toolchain Colibri VF50](https://developer-archives.toradex.com/getting-started/module-2-my-first-hello-world-in-c/configure-toolchain-colibri-vfxx?som=colibri-vf50&board=iris-carrier-board&os=linux&desktop=linux)\
  **3.** [Linux/Yocto Project](https://developer-archives.toradex.com/getting-started/module-1-from-the-box-to-the-shell/update-the-linux-image-iris-carrier-board-colibri-vfxx?som=colibri-vf50&board=iris-carrier-board&os=linux&desktop=linux)
-
-
 
  A seguir, estão descritos os processos de instalação de cada dependência. 
 
