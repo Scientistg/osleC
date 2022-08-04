@@ -1,3 +1,11 @@
+// +---------------------------------------------+
+// |    Creation Date:  2022-07-04T12:28         |
+// |                                             |
+// |     Authors: Gabriel Araujo                 |
+// |              Estevao Calera                 |
+// |                                             |
+// +---------------------------------------------+
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
