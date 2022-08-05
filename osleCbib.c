@@ -1,3 +1,12 @@
+// +---------------------------------------------+
+// |    Creation Date:  2022-08-05T15:34         |
+// |                                             |
+// |    Authors: Gabriel Araujo                  |
+// |             Estevao Calera                  |
+// |                                             |
+// +---------------------------------------------+
+
+
 #include "osleCbib.h"
 
 #include <stdlib.h>
