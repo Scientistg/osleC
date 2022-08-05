@@ -1,3 +1,11 @@
+// +---------------------------------------------+
+// |    Creation Date:  2022-08-05T15:33         |
+// |                                             |
+// |    Authors: Gabriel Araujo                  |
+// |             Estevao Calera                  |
+// |                                             |
+// +---------------------------------------------+
+
 #ifndef OSLECBIB_H
 #define OSLECBIB_H
 
