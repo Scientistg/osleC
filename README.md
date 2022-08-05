@@ -62,7 +62,9 @@ cd osleC
 Para se realizar a compilação cruzada se executa o seguinte comando:
 
 ```console
-${CC} -Wall code.c -o passaOuRepassa
+${CC} -Wall osleCbib.c -o bibs.o
+${CC} -Wall code.c -o main.o
+${CC} -Wall bibs.o main.o -o passaOuRepassa
 ```
 
 O arquivo **passaOuRepassa** consiste do executável em arquitertura *ARM* que será copiado utilizando ssh. Para isso, deve se conectar a placa em uma rede, obtendo o ip dessa pelo seu metodo de preferência. Com o Host na mesma rede que o sistema embarcado, a fim de facilitar a conexão, realiza-se os seguintes comandos:
